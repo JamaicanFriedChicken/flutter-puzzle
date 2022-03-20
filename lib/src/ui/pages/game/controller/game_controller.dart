@@ -69,6 +69,9 @@ class GameController extends ChangeNotifier {
 
         // notify to the game view
         _streamController.sink.add(null);
+
+        audioRepository
+            .play('assets/sounds/professor_layton_puzzle_completed.mp3');
       }
     }
   }
@@ -180,7 +183,8 @@ class GameController extends ChangeNotifier {
         if (emptyPosition.y + 1 <= crossAxisCount) {
           index = tiles.indexWhere(
             (e) {
-              return e.position.x == emptyPosition.x && e.position.y == emptyPosition.y + 1;
+              return e.position.x == emptyPosition.x &&
+                  e.position.y == emptyPosition.y + 1;
             },
           );
         }
@@ -189,7 +193,8 @@ class GameController extends ChangeNotifier {
         if (emptyPosition.y > 0) {
           index = tiles.indexWhere(
             (e) {
-              return e.position.x == emptyPosition.x && e.position.y == emptyPosition.y - 1;
+              return e.position.x == emptyPosition.x &&
+                  e.position.y == emptyPosition.y - 1;
             },
           );
         }
@@ -198,7 +203,8 @@ class GameController extends ChangeNotifier {
         if (emptyPosition.x >= 1) {
           index = tiles.indexWhere(
             (e) {
-              return e.position.x - 1 == emptyPosition.x && e.position.y == emptyPosition.y;
+              return e.position.x - 1 == emptyPosition.x &&
+                  e.position.y == emptyPosition.y;
             },
           );
         }
@@ -207,7 +213,8 @@ class GameController extends ChangeNotifier {
         if (emptyPosition.x <= crossAxisCount) {
           index = tiles.indexWhere(
             (e) {
-              return e.position.x + 1 == emptyPosition.x && e.position.y == emptyPosition.y;
+              return e.position.x + 1 == emptyPosition.x &&
+                  e.position.y == emptyPosition.y;
             },
           );
         }
