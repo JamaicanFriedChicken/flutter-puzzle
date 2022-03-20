@@ -13,6 +13,11 @@ const puzzleOptions = <PuzzleImage>[
     soundPath: '',
   ),
   PuzzleImage(
+    name: 'Child of Light',
+    assetPath: 'assets/fav_images/child_of_light.png',
+    soundPath: '',
+  ),
+  PuzzleImage(
     name: 'Cute Nezuko',
     assetPath: 'assets/fav_images/cute_nezuko.png',
     soundPath: 'assets/sounds/nezuko_sound.mp3',
@@ -21,11 +26,6 @@ const puzzleOptions = <PuzzleImage>[
     name: 'Funny Nezuko',
     assetPath: 'assets/fav_images/funny_nezuko.png',
     soundPath: 'assets/sounds/nezuko_sound.mp3',
-  ),
-  PuzzleImage(
-    name: 'Child of Light',
-    assetPath: 'assets/fav_images/child_of_light.png',
-    soundPath: '',
   ),
   PuzzleImage(
     name: 'Fez',
